@@ -1,6 +1,6 @@
 # 🛍️ Shop App
 
-A modern, full-featured e-commerce Flutter application with Firebase backend integration. This app demonstrates a complete shopping experience with authentication, product management, cart functionality, and responsive design for both mobile and web platforms.
+A modern, Flutter application with Firebase backend integration. This app demonstrates a shopping experience with authentication, product management, cart functionality, and responsive design for both mobile and web platforms.
 
 ---
 
@@ -103,121 +103,70 @@ lib/
 
 ---
 
-## 🔥 Firebase Setup
-
-### Firestore Database Structure
-
-```
-products (collection)
-├── {documentId}
-    ├── id: String
-    ├── title: String
-    ├── price: double
-    ├── image_url: String
-    ├── company: String
-    ├── sizes: List<int>
-    └── creatorId: String (user UID)
-```
-
-### Security Rules Example
-
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /products/{productId} {
-      allow read: if request.auth != null;
-      allow write: if request.auth != null && 
-                      request.auth.uid == resource.data.creatorId;
-      allow delete: if request.auth != null && 
-                       request.auth.uid == resource.data.creatorId;
-    }
-  }
-}
-```
-
----
-
 ## 📸 Screenshots
 
-> **Add your screenshots in the following categories:**
+> Place your screenshots in the `screenshots/` folder organized by category, then they will display below.
 
 ### 🔐 Authentication Screens
-```markdown
-<!-- Paste screenshots here -->
-- Login screen with email/password fields
-- Signup screen with validation
-- Loading state during authentication
-```
+
+<p align="center">
+  <img src="screenshots/auth/login.png" alt="Login Screen" width="250"/>
+  <img src="screenshots/auth/signup.png" alt="Signup Screen" width="250"/>
+</p>
+
+*Login screen with email/password fields, signup with validation, and authentication loading state.*
+
+---
 
 ### 🏠 Home & Product Browsing
-```markdown
-<!-- Paste screenshots here -->
-- Product list view (mobile)
-- Product grid view (web/tablet)
-- Filter chips for categories
-- Search functionality
-```
+
+<p align="center">
+  <img src="screenshots/home/product_list.png" alt="Product List View" width="250"/>
+  <img src="screenshots/home/product_grid.png" alt="Product Grid View" width="250"/>
+</p>
+
+*Product browsing with list/grid views, category filters, and search functionality.*
+
+---
 
 ### 🛒 Shopping Cart
-```markdown
-<!-- Paste screenshots here -->
-- Cart page with product list
-- Swipe-to-delete gesture
-- Empty cart state
-```
+
+<p align="center">
+  <img src="screenshots/cart/cart_view.png" alt="Shopping Cart" width="250"/>
+</p>
+
+*Shopping cart page with product list, swipe-to-delete gesture, and empty state.*
+
+---
 
 ### 📦 Product Details
-```markdown
-<!-- Paste screenshots here -->
-- Product detail view
-- Size selection chips
-- Add to cart button
-- Product image display
-```
+
+<p align="center">
+  <img src="screenshots/product_details/detail_view.png" alt="Product Details" width="250"/>
+</p>
+
+*Product detail view with image display, size selection chips, and add-to-cart functionality.*
+
+---
 
 ### ➕ Add Product
-```markdown
-<!-- Paste screenshots here -->
-- Add product form
-- Input fields (id, title, price, image URL, company, sizes)
-- Submit button and success feedback
-```
+
+<p align="center">
+  <img src="screenshots/add_product/form.png" alt="Add Product Form" width="250"/>
+</p>
+
+*Add product form with input fields for id, title, price, image URL, company, sizes, and success feedback.*
+
+---
 
 ### 🌐 Web View
-```markdown
-<!-- Paste screenshots here -->
-- Responsive web layout
-- Desktop navigation
-- Grid view on larger screens
-```
 
----
+<p align="center">
+  <img src="screenshots/web/desktop_home.png" alt="Desktop Home" width="400"/>
+  <img src="screenshots/web/responsive_grid.png" alt="Responsive Grid" width="400"/>
+</p>
 
-## 📁 Key Files
-
-| File | Purpose |
-|------|---------|
-| `main.dart` | App initialization, Firebase setup, authentication router |
-| `login_page.dart` | User login with Firebase Auth |
-| `signup_page.dart` | New user registration |
-| `homepage.dart` | Bottom navigation with product list, cart, menu, profile |
-| `homepage_body.dart` | StreamBuilder for real-time product feed, filter chips |
-| `cart_page.dart` | Shopping cart with Provider state management |
-| `product_details_page.dart` | Product view with size selection and add-to-cart |
-| `add_product.dart` | Form to create new products in Firestore |
-| `cart_provider.dart` | ChangeNotifier for cart state management |
-| `product_card.dart` | Reusable product card widget |
-
----
-
-## 🎨 Design Features
-
-- **Custom Typography**: Outfit font family
-- **Material 3 Design**: Modern, accessible UI components
-- **Color Scheme**: Yellow accent (`#F9E727`), grey tones, gradient backgrounds
-- **Responsive Layouts**: Adaptive `ListView` and `GridView` based on screen width
-- **Smooth Animations**: Dismissible cards, chip selection, navigation transitions
+*Responsive web layout with desktop navigation and adaptive grid view on larger screens.*
 
 ---
 
@@ -242,22 +191,10 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👤 Author
 
 **Shomail Khan**
 - GitHub: [@ShomailKhan](https://github.com/ShomailKhan)
-
----
-
-## 📞 Support
-
-For issues or questions, please [open an issue](https://github.com/ShomailKhan/shop_app/issues) on GitHub.
 
 ---
 
