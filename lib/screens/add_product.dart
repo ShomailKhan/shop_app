@@ -80,32 +80,38 @@ class _AddProductState extends State<AddProduct> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Add Product')),
+      appBar: AppBar(title: const Text('Add Product', style: TextStyle(fontSize: 30),)),
       body: Padding(
         padding: const EdgeInsets.all(12),
-        child: ListView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(controller: idCtrl, decoration: _dec('id')),
-            const SizedBox(height: 8),
-            TextField(controller: titleCtrl, decoration: _dec('title')),
-            const SizedBox(height: 8),
-            TextField(controller: priceCtrl, decoration: _dec('price'), keyboardType: TextInputType.number),
-            const SizedBox(height: 8),
-            TextField(controller: imageCtrl, decoration: _dec('image_url')),
-            const SizedBox(height: 8),
-            TextField(controller: companyCtrl, decoration: _dec('company')),
-            const SizedBox(height: 8),
-            TextField(controller: sizesCtrl, decoration: _dec('sizes (e.g. 7,8,9)')),
-            const SizedBox(height: 16),
-            ElevatedButton(onPressed: _submit,
-             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black,
-              fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)
-              )
-             ),
-             child: const Text('Submit', style: TextStyle(color: Colors.white),)),
+            SizedBox(height: MediaQuery.of(context).size.height*0.2),
+            Expanded(
+              child: ListView(
+                children: [
+                  TextField(controller: titleCtrl, decoration: _dec('title')),
+                  const SizedBox(height: 8),
+                  TextField(controller: priceCtrl, decoration: _dec('price'), keyboardType: TextInputType.number),
+                  const SizedBox(height: 8),
+                  TextField(controller: imageCtrl, decoration: _dec('image_url')),
+                  const SizedBox(height: 8),
+                  TextField(controller: companyCtrl, decoration: _dec('company')),
+                  const SizedBox(height: 8),
+                  TextField(controller: sizesCtrl, decoration: _dec('sizes (e.g. 7,8,9)')),
+                  const SizedBox(height: 16),
+                  ElevatedButton(onPressed: _submit,
+                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                    )
+                   ),
+                   child: const Text('Submit', style: TextStyle(color: Colors.white),)),
+                ],
+              ),
+            ),
           ],
         ),
       ),

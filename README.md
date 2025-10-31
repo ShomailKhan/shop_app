@@ -105,8 +105,6 @@ lib/
 
 ## 📸 Screenshots
 
-> Place your screenshots in the `screenshots/` folder organized by category, then they will display below.
-
 ### 🔐 Authentication Screens
 
 <p align="center">
@@ -125,7 +123,7 @@ lib/
   <img src="screenshots/home/product_grid.png" alt="Product Grid View" width="250"/>
 </p>
 
-*Product browsing with list/grid views, category filters, and search functionality.*
+*Product browsing with list/grid views*
 
 ---
 
@@ -135,7 +133,7 @@ lib/
   <img src="screenshots/cart/cart_view.png" alt="Shopping Cart" width="250"/>
 </p>
 
-*Shopping cart page with product list, swipe-to-delete gesture, and empty state.*
+*Shopping cart page with product list, swipe-to-delete gesture*
 
 ---
 
@@ -163,7 +161,7 @@ lib/
 
 <p align="center">
   <img src="screenshots/web/desktop_home.png" alt="Desktop Home" width="400"/>
-  <img src="screenshots/web/responsive_grid.png" alt="Responsive Grid" width="400"/>
+
 </p>
 
 *Responsive web layout with desktop navigation and adaptive grid view on larger screens.*
