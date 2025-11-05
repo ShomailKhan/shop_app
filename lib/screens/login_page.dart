@@ -134,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: Theme.of(context).textTheme.titleSmall,
                         children: [
                           TextSpan(
-                            text: 'Sign Up',
+                            text: ' Sign Up',
                             style: Theme.of(context).textTheme.titleSmall
                                 ?.copyWith(
                                   fontWeight: FontWeight.bold,

@@ -13,7 +13,6 @@ class SignoutPage extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () async {
             await FirebaseAuth.instance.signOut();
-            SystemNavigator.pop();
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.black,

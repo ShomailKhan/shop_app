@@ -88,7 +88,7 @@ class _HomepageBodyState extends State<HomepageBody> {
         StreamBuilder(
           stream: FirebaseFirestore.instance
               .collection("products")
-              .where( 
+              .where(
                 'creatorId',
                 isEqualTo: FirebaseAuth.instance.currentUser!.uid,
               )
